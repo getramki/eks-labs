@@ -1,17 +1,17 @@
 # 1. Deploy ecedemo-nodejs back-end
-cd E:\Workspace\EKS-Labs-Fundamental\MicroServices\ecsdemo-nodejs
+cd E:\Workspace\eks-labs\EKS-Labs-Fundamental\MicroServices\ecsdemo-nodejs
 kubectl apply -f kubernetes/deployment.yaml
 kubectl apply -f kubernetes/service.yaml
 kubectl get deployment ecsdemo-nodejs
 
 #  2. Deploy ecsdemo-crystal back-end
-cd E:\Workspace\EKS-Labs-Fundamental\MicroServices\ecsdemo-crystal
+cd E:\Workspace\eks-labs\EKS-Labs-Fundamental\MicroServices\ecsdemo-crystal
 kubectl apply -f kubernetes/deployment.yaml
 kubectl apply -f kubernetes/service.yaml
 kubectl get deployment ecsdemo-crystal
 
 # 3. Deploy ecsdemo-frontend front-end
-cd E:\Workspace\EKS-Labs-Fundamental\MicroServices\ecsdemo-frontend
+cd E:\Workspace\eks-labs\EKS-Labs-Fundamental\MicroServices\ecsdemo-frontend
 kubectl apply -f kubernetes/deployment.yaml
 kubectl apply -f kubernetes/service.yaml
 kubectl get deployment ecsdemo-frontend
