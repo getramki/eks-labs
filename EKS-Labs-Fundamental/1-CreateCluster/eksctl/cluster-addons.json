@@ -1,0 +1,128 @@
+{
+    Addons: [{
+        AddonName: "kube-proxy",
+        AddonVersions: [{
+            AddonVersion: "v1.20.4-eksbuild.2",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: true,
+                PlatformVersions: ["*"]
+              }]
+          },{
+            AddonVersion: "v1.19.6-eksbuild.2",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },{
+            AddonVersion: "v1.18.8-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          }],
+        Type: "networking"
+      },{
+        AddonName: "vpc-cni",
+        AddonVersions: [
+          {
+            AddonVersion: "v1.9.1-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.9.0-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.8.0-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.7.10-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.7.9-eksbuild.2",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.7.6-eksbuild.2",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.7.5-eksbuild.2",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: true,
+                PlatformVersions: ["*"]
+              }]
+          },
+          {
+            AddonVersion: "v1.6.3-eksbuild.2",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          }
+        ],
+        Type: "networking"
+      },{
+        AddonName: "coredns",
+        AddonVersions: [{
+            AddonVersion: "v1.8.3-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: true,
+                PlatformVersions: ["*"]
+              }]
+          },{
+            AddonVersion: "v1.8.0-eksbuild.1",
+            Architecture: ["amd64","arm64"],
+            Compatibilities: [{
+                ClusterVersion: "1.20",
+                DefaultVersion: false,
+                PlatformVersions: ["*"]
+              }]
+          }],
+        Type: "networking"
+      }]
+}

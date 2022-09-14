@@ -1,0 +1,14 @@
+{
+  "name": "NewStartup",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "latest",
+    "body-parser": "latest",
+    "ejs": "latest",
+    "express": "latest"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

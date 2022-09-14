@@ -1,0 +1,9 @@
+- name: game-2048
+  podExecutionRoleARN: arn:aws:iam::<Replace-With-AWS-Account-ID>:role/eksctl-Dev-fargate-FargatePodExecutionRole-L6HXQXQSZNGJ
+  selectors:
+  - namespace: game-2048
+  status: ACTIVE
+  subnets:
+  - subnet-03406e01ed0343c77
+  - subnet-0aa1b3eeca4eae144
+  - subnet-0feab560f8373d4fb

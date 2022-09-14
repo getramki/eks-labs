@@ -1,0 +1,84 @@
+Type: AWS::EC2::VPCEndpoint
+Properties: 
+  PolicyDocument: Json
+  PrivateDnsEnabled: Boolean
+  RouteTableIds: 
+    - String
+  SecurityGroupIds: 
+    - String
+  ServiceName: String
+  SubnetIds: 
+    - String
+  VpcEndpointType: String
+  VpcId: String
+
+S3Endpoint:
+  Type: 'AWS::EC2::VPCEndpoint'
+  Properties:
+    PolicyDocument:
+      Version: 2012-10-17
+      Statement:
+        - Effect: Allow
+          Principal: '*'
+          Action:
+            - 's3:*'            
+          Resource:
+            - 'arn:aws:s3:::*'
+    RouteTableIds:
+      - !Ref PrivateRouteTable01
+      - !Ref PrivateRouteTable02
+    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
+    VpcId: 
+      Ref: VPC
+
+S3Endpoint:
+  Type: 'AWS::EC2::VPCEndpoint'
+  Properties:
+    PolicyDocument:
+      Version: 2012-10-17
+      Statement:
+        - Effect: Allow
+          Principal: '*'
+          Action:
+            - 's3:*'            
+          Resource:
+            - 'arn:aws:s3:::*'
+    RouteTableIds:
+      - !Ref PrivateRouteTable01
+      - !Ref PrivateRouteTable02
+    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
+    VpcId:
+      Ref: VPC
+
+SSMEndpoint:
+  Type: AWS::EC2::VPCEndpoint
+  Properties:
+    PrivateDnsEnabled: true
+    ServiceName: !Sub "com.amazonaws.${AWS::Region}.ssm"
+    SubnetIds: 
+      Ref: ParamSubnetIds
+    VpcEndpointType: 'Interface'
+    VpcId:
+      Ref: VPC
+  
+SSMMessagesEndpoint:
+  Type: AWS::EC2::VPCEndpoint
+  Properties:
+    PrivateDnsEnabled: true
+    ServiceName: !Sub "com.amazonaws.${AWS::Region}.ssmmessages"
+    SubnetIds: 
+      Ref: ParamSubnetIds
+    VpcEndpointType: 'Interface'
+    VpcId:
+      Ref: VPC
+
+EC2MessagesEndpoint:
+  Type: AWS::EC2::VPCEndpoint
+  Properties:
+    PrivateDnsEnabled: true
+    ServiceName: !Sub "com.amazonaws.${AWS::Region}.ec2messages"
+    SubnetIds: 
+      Ref: ParamSubnetIds
+    VpcEndpointType: 'Interface'
+    VpcId:
+      Ref: VPC
